@@ -3,43 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Plant & Light Data Map</title>
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossorigin=""/>
-    <!-- MarkerCluster CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.1/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.1/dist/MarkerCluster.Default.css" />
+    <title>Global Power Plant Visualization Project</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <!-- AwesomeMarkers CSS (Removed) -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" /> -->
-
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
-    <h1>Interactive Map</h1>
-    <div class="nav-links">
-        <a href="map.html" class="active">Map</a>
-        <a href="statistics.html">Statistics</a>
-        <a href="specs.html">Specs</a>
-        <a href="index.html">Home</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Power Plant Visualization</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="specs.html">Specs</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button id="theme-toggle" class="btn btn-outline-light">
+                        <i class="fas fa-moon"></i> Dark Mode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card hero-card mb-5">
+                    <div class="card-body text-center">
+                        <h1 class="display-4 mb-4">Global Power Plant Visualization</h1>
+                        <p class="lead mb-4">Explore the worldwide distribution of power plants, analyze energy infrastructure, and discover correlations with light pollution data.</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <a href="index.html" class="btn btn-primary btn-lg px-4 me-md-2">Explore the Map</a>
+                            <a href="statistics.html" class="btn btn-outline-secondary btn-lg px-4">View Statistics</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt feature-icon mb-3"></i>
+                                <h3>Interactive Map</h3>
+                                <p>Visualize global power plants with an interactive map. Filter by type, capacity, and region to gain insights into energy infrastructure distribution.</p>
+                                <a href="index.html" class="btn btn-sm btn-outline-primary mt-2">Open Map</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-chart-line feature-icon mb-3"></i>
+                                <h3>Statistical Analysis</h3>
+                                <p>Conduct in-depth statistical analysis on power plant data. Compare regions, analyze capacity distributions, and explore the relationship with light pollution.</p>
+                                <a href="statistics.html" class="btn btn-sm btn-outline-primary mt-2">View Statistics</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-project-diagram feature-icon mb-3"></i>
+                                <h3>Country Specifications</h3>
+                                <p>Examine detailed energy profiles of individual countries. Compare energy mixes, analyze top power plants, and export data for further research.</p>
+                                <a href="specs.html" class="btn btn-sm btn-outline-primary mt-2">View Specs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">About The Project</h2>
+                        <p>The Global Power Plant Visualization Project is an interactive web-based tool designed to visualize and analyze global power plant data. By combining comprehensive power plant information with geospatial analysis, this platform enables researchers, policymakers, and the general public to explore patterns in global energy infrastructure.</p>
+                        
+                        <h3 class="mt-4">Key Features</h3>
+                        <ul>
+                            <li><strong>Comprehensive Data Visualization:</strong> Interactive map displaying global power plants with filtering capabilities</li>
+                            <li><strong>Energy Mix Analysis:</strong> Country-specific energy profiles showing the distribution of different power generation types</li>
+                            <li><strong>Statistical Tools:</strong> Advanced statistical analysis tools for exploring correlations and distributions</li>
+                            <li><strong>Light Pollution Correlation:</strong> Analysis of the relationship between power plants and nighttime light intensity</li>
+                            <li><strong>Data Export:</strong> Export capabilities for further research and analysis</li>
+                        </ul>
+                        
+                        <h3 class="mt-4">Data Sources</h3>
+                        <p>This project utilizes the <a href="https://datasets.wri.org/dataset/globalpowerplantdatabase" target="_blank">Global Power Plant Database</a> provided by the World Resources Institute. This comprehensive dataset contains information on power plants around the world, including their geographic location, capacity, fuel type, and other attributes.</p>
+                        
+                        <p>The light pollution data is based on satellite imagery of Earth at night, providing insights into human activity and energy usage patterns.</p>
+                    </div>
+                </div>
+                
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">How To Use</h2>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <h4><i class="fas fa-map me-2"></i> Map View</h4>
+                                <ol>
+                                    <li>Use the filters to select power plant types</li>
+                                    <li>Zoom in/out to explore different regions</li>
+                                    <li>Click on markers to view detailed information</li>
+                                    <li>Toggle between normal and light pollution layers</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-6">
+                                <h4><i class="fas fa-chart-bar me-2"></i> Statistics View</h4>
+                                <ol>
+                                    <li>Select analysis type (correlation, comparison, etc.)</li>
+                                    <li>Choose variables to analyze</li>
+                                    <li>Filter by region and/or fuel type</li>
+                                    <li>Export results for further analysis</li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4><i class="fas fa-clipboard-list me-2"></i> Specs View</h4>
+                                <ol>
+                                    <li>Select a country from the dropdown</li>
+                                    <li>View energy mix visualization</li>
+                                    <li>Examine top power plants in the table</li>
+                                    <li>Compare with another country if desired</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-6">
+                                <h4><i class="fas fa-download me-2"></i> Data Export</h4>
+                                <ol>
+                                    <li>Navigate to the Statistics or Specs page</li>
+                                    <li>Generate the desired visualization or table</li>
+                                    <li>Click the export button</li>
+                                    <li>Choose image or data export format</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="map"></div>
+    
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Global Power Plant Visualization</h5>
+                    <p>An interactive tool for exploring and analyzing global power plant data</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Data source: <a href="https://datasets.wri.org/dataset/globalpowerplantdatabase" target="_blank" class="text-light">Global Power Plant Database</a></p>
+                    <p>© 2025 Power Plant Visualization Project</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-    <!-- MarkerCluster JS -->
-    <script src="https://unpkg.com/leaflet.markercluster@1.5.1/dist/leaflet.markercluster.js"></script>
-    <!-- Chart.js for graphs -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <!-- NoUiSlider for range sliders -->
-    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.1/dist/nouislider.min.css">
-
-    <script src="script.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Theme handling script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for saved theme preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.querySelector('#theme-toggle i').classList.remove('fa-moon');
+                document.querySelector('#theme-toggle i').classList.add('fa-sun');
+            }
+            
+            // Set up theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    if (document.body.classList.contains('dark-theme')) {
+                        // Switch to light theme
+                        document.body.classList.remove('dark-theme');
+                        localStorage.setItem('theme', 'light');
+                        document.querySelector('#theme-toggle i').classList.remove('fa-sun');
+                        document.querySelector('#theme-toggle i').classList.add('fa-moon');
+                    } else {
+                        // Switch to dark theme
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                        document.querySelector('#theme-toggle i').classList.remove('fa-moon');
+                        document.querySelector('#theme-toggle i').classList.add('fa-sun');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
