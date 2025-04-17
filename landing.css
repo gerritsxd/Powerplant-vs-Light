@@ -1,0 +1,115 @@
+/* Landing page specific styles */
+.hero-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme support */
+body.dark-theme {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-theme .card {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: #495057;
+}
+
+body.dark-theme .hero-card {
+    background-color: #343a40;
+}
+
+body.dark-theme .text-dark {
+    color: #f8f9fa !important;
+}
+
+body.dark-theme .btn-outline-secondary {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+body.dark-theme a:not(.btn) {
+    color: #79b8ff;
+}
+
+body.dark-theme a:hover:not(.btn) {
+    color: #9ecbff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-card {
+        padding: 1.5rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Animation for feature cards */
+.card {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom scrollbar for better UX */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body.dark-theme ::-webkit-scrollbar-track {
+    background: #343a40;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb {
+    background: #495057;
+}
+
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: #6c757d;
+}

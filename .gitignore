@@ -1,0 +1,34 @@
+# Ignore large datasets
+night_light_data/
+*.tif
+*.tiff
+*.tif.gz
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Downloaded datasets that are too large for Git
+# The global power plant database is included in the repo
+# The light pollution dataset needs to be downloaded separately

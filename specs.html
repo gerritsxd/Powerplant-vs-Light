@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Plant Specifications</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    
+    <!-- D3.js for advanced visualizations -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="specs.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Power Plant Visualization</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="map.html">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="statistics.html">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="specs.html">Specs</a>
+                    </li>
+                </ul>
+                <div class="ms-auto">
+                    <button id="theme-toggle" class="btn btn-outline-light">
+                        <i class="fas fa-moon"></i> Dark Mode
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4" id="country-selection-panel">
+                    <div class="card-header">
+                        <h5>Country Selection</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="primary-country" class="form-label">Primary Country</label>
+                            <select class="form-select" id="primary-country">
+                                <option value="">Select a country</option>
+                                <!-- Countries will be populated dynamically -->
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="comparison-country" class="form-label">Comparison Country (Optional)</label>
+                            <select class="form-select" id="comparison-country">
+                                <option value="">None (Single Country View)</option>
+                                <!-- Countries will be populated dynamically -->
+                            </select>
+                        </div>
+                        
+                        <button type="button" id="update-specs" class="btn btn-primary w-100">Update Specifications</button>
+                    </div>
+                </div>
+                
+                <div class="card mb-4" id="summary-panel">
+                    <div class="card-header">
+                        <h5>Country Summary</h5>
+                    </div>
+                    <div class="card-body" id="country-summary">
+                        <p class="text-muted">Select a country to view summary</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5>Energy Mix</h5>
+                                <button class="btn btn-sm btn-outline-secondary export-btn" data-chart="energy-mix">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 300px;">
+                                    <canvas id="energy-mix-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5>Capacity Distribution</h5>
+                                <button class="btn btn-sm btn-outline-secondary export-btn" data-chart="capacity-dist">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 300px;">
+                                    <canvas id="capacity-distribution-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5>Top Power Plants</h5>
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary" id="sort-by-capacity">
+                                        Sort by Capacity
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary export-btn" data-chart="top-plants">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover" id="power-plants-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Fuel Type</th>
+                                                <th>Capacity (MW)</th>
+                                                <th>Location</th>
+                                                <th>Light Intensity</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Table rows will be populated dynamically -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card mb-4" id="comparison-panel" style="display: none;">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5>Country Comparison</h5>
+                                <button class="btn btn-sm btn-outline-secondary export-btn" data-chart="comparison">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="chart-container" style="height: 300px;">
+                                            <canvas id="comparison-fuel-chart"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="chart-container" style="height: 300px;">
+                                            <canvas id="comparison-capacity-chart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="specs.js"></script>
+</body>
+</html>

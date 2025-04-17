@@ -1,0 +1,218 @@
+/* Statistics Page Styling */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Dark theme for cards */
+body.dark-theme .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-theme .card-header {
+    background-color: #2a2a2a;
+    border-color: #333;
+}
+
+/* Dark theme for form elements */
+body.dark-theme .form-select,
+body.dark-theme .form-control {
+    background-color: #333;
+    border-color: #444;
+    color: #f0f0f0;
+}
+
+body.dark-theme .form-select option {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+/* Fuel type filter pills */
+.fuel-filter {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fuel-filter.active {
+    font-weight: 500;
+}
+
+.fuel-filter:not(.active) {
+    opacity: 0.6;
+}
+
+.fuel-filter:hover {
+    opacity: 1;
+}
+
+.fuel-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* Correlation strength indicators */
+.correlation-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.correlation-strong-positive {
+    background-color: #4CAF50;
+}
+
+.correlation-moderate-positive {
+    background-color: #8BC34A;
+}
+
+.correlation-weak-positive {
+    background-color: #CDDC39;
+}
+
+.correlation-negligible {
+    background-color: #9E9E9E;
+}
+
+.correlation-weak-negative {
+    background-color: #FFC107;
+}
+
+.correlation-moderate-negative {
+    background-color: #FF9800;
+}
+
+.correlation-strong-negative {
+    background-color: #F44336;
+}
+
+/* Results styling */
+.stat-result {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+body.dark-theme .stat-result {
+    border-bottom-color: #333;
+}
+
+.stat-result:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.stat-result-title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.stat-result-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.stat-result-description {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 0.25rem;
+}
+
+body.dark-theme .stat-result-description {
+    color: #aaa;
+}
+
+/* Visualization container */
+#visualization-container {
+    position: relative;
+}
+
+/* Loading indicator */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+body.dark-theme .loading-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+body.dark-theme .spinner {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-top-color: #007bff;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Tooltip styling */
+.d3-tooltip {
+    position: absolute;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+body.dark-theme .d3-tooltip {
+    background: #333;
+    border-color: #444;
+    color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    #visualization-container {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #visualization-container {
+        height: 300px !important;
+    }
+}

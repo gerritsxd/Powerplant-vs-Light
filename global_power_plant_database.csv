@@ -1,0 +1,283 @@
+name,latitude,longitude,country,capacity_mw,primary_fuel
+Aboño,43.5622,-5.7711,Spain,903.0,Coal
+Aceca,39.8194,-3.8556,Spain,627.0,Gas
+Almaraz,39.8097,-5.6981,Spain,2017.0,Nuclear
+Anllares,42.8292,-6.5372,Spain,346.8,Coal
+Arcos de la Frontera,36.7506,-5.8106,Spain,1619.0,Gas
+As Pontes,43.4492,-7.8597,Spain,1468.5,Coal
+Ascó,41.2022,0.5731,Spain,2017.1,Nuclear
+Bahía de Algeciras,36.1808,-5.4372,Spain,780.0,Gas
+Besós,41.4181,2.2306,Spain,1509.0,Gas
+Planta Solar Núñez de Balboa,38.5667,-6.9667,Spain,500.0,Solar
+Planta Solar Mula,38.0333,-1.4833,Spain,450.0,Solar
+Planta Solar Don Rodrigo,37.3000,-5.9333,Spain,175.0,Solar
+Planta Solar Talayuela,39.8000,-5.6000,Spain,300.0,Solar
+Planta Solar Olmedilla,39.5667,-2.1167,Spain,60.0,Solar
+Planta Solar Puertollano,38.6833,-4.1000,Spain,50.0,Solar
+Planta Solar Guadarranque,36.1833,-5.4333,Spain,13.0,Solar
+Planta Solar Beneixama,38.6833,-0.7667,Spain,20.0,Solar
+Planta Solar Jumilla,38.4667,-1.3333,Spain,20.0,Solar
+Planta Solar Arnedo,42.2333,-2.1000,Spain,30.0,Solar
+Parque Eólico Maranchón,41.0500,-2.2000,Spain,208.0,Wind
+Parque Eólico El Andévalo,37.6000,-7.2000,Spain,300.0,Wind
+Parque Eólico Higueruela,38.9667,-1.4500,Spain,161.0,Wind
+Parque Eólico Sierra del Trigo,37.8333,-3.0000,Spain,128.0,Wind
+Parque Eólico La Muela,41.5667,-1.1167,Spain,113.0,Wind
+Parque Eólico Tarifa,36.0167,-5.6000,Spain,250.0,Wind
+Parque Eólico Ampliación El Marquesado,37.2333,-3.1333,Spain,198.0,Wind
+Parque Eólico Sierra de Jerez,36.7000,-5.6000,Spain,140.0,Wind
+Parque Eólico Tahivilla,36.1667,-5.7167,Spain,100.0,Wind
+Bruce,44.3253,-81.5997,Canada,6384.0,Nuclear
+Pickering,43.8131,-79.0664,Canada,3100.0,Nuclear
+Darlington,43.8728,-78.7197,Canada,3512.0,Nuclear
+Nanticoke,42.7981,-80.0547,Canada,3964.0,Coal
+Lambton,42.8303,-82.4292,Canada,1976.0,Coal
+Thunder Bay,48.3428,-89.2731,Canada,326.0,Biomass
+Atikokan,48.8431,-91.5972,Canada,205.0,Biomass
+Sundance,53.5883,-114.6889,Canada,1861.0,Coal
+Keephills,53.5547,-114.6375,Canada,790.0,Coal
+Genesee,53.3506,-114.3172,Canada,1266.0,Coal
+Sheerness,51.4142,-111.8756,Canada,780.0,Coal
+Boundary Dam,49.0983,-103.0544,Canada,813.0,Coal
+Shand,49.1017,-102.9389,Canada,276.0,Coal
+Poplar River,49.0369,-105.1833,Canada,582.0,Coal
+Belledune,47.9356,-65.8514,Canada,467.0,Coal
+Coleson Cove,45.1708,-66.1417,Canada,1050.0,Oil
+Point Lepreau,45.0686,-66.4622,Canada,705.0,Nuclear
+Lingan,46.2333,-60.0333,Canada,620.0,Coal
+Point Aconi,46.3,-60.3,Canada,171.0,Coal
+Trenton,45.6167,-62.6333,Canada,307.0,Coal
+Point Tupper,45.5833,-61.35,Canada,154.0,Coal
+Holyrood,47.45,-53.0667,Canada,490.0,Oil
+Fermi,41.9625,-83.2578,United States,1150.0,Nuclear
+Davis-Besse,41.5972,-83.0864,United States,894.0,Nuclear
+Perry,41.8008,-81.1433,United States,1256.0,Nuclear
+Beaver Valley,40.6219,-80.4331,United States,1738.0,Nuclear
+Three Mile Island,40.1531,-76.7247,United States,802.0,Nuclear
+Peach Bottom,39.7589,-76.2692,United States,2220.0,Nuclear
+Calvert Cliffs,38.4317,-76.4419,United States,1708.0,Nuclear
+North Anna,38.0608,-77.7906,United States,1790.0,Nuclear
+Surry,37.1656,-76.6983,United States,1638.0,Nuclear
+Brunswick,33.9583,-78.0106,United States,1870.0,Nuclear
+Haiyang,37.0167,121.3833,China,2500.0,Nuclear
+Tianwan,34.6833,119.45,China,4060.0,Nuclear
+Qinshan,30.4356,120.9578,China,3520.0,Nuclear
+Daya Bay,22.5972,114.5439,China,1888.0,Nuclear
+Yangjiang,21.6089,112.2569,China,6000.0,Nuclear
+Fangchenggang,21.5917,108.3458,China,2000.0,Nuclear
+Changjiang,19.4167,109.0833,China,1300.0,Nuclear
+Fuqing,25.5333,119.65,China,4000.0,Nuclear
+Ningde,26.7,119.65,China,4000.0,Nuclear
+Sanmen,29.1,121.6333,China,2500.0,Nuclear
+Hongyanhe,39.7972,121.4767,China,4242.0,Nuclear
+Tianwan,34.6878,119.4508,China,4060.0,Nuclear
+Qinshan,30.4356,120.9578,China,3126.0,Nuclear
+Ningde,26.7117,119.6589,China,4380.0,Nuclear
+Fuqing,25.5417,119.4494,China,3420.0,Nuclear
+Changjiang,19.4167,109.0500,China,1300.0,Nuclear
+Fangchenggang,21.6167,108.3500,China,2000.0,Nuclear
+Yangjiang,21.6083,112.2500,China,6000.0,Nuclear
+Sanmen,29.1011,121.6369,China,2500.0,Nuclear
+Haiyang,36.6833,121.2333,China,2500.0,Nuclear
+Taishan,21.9089,112.9981,China,3320.0,Nuclear
+Three Gorges Dam,30.8278,111.0033,China,22500.0,Hydro
+Xiluodu,28.2500,103.6667,China,13860.0,Hydro
+Xiangjiaba,28.6333,104.4000,China,6448.0,Hydro
+Longtan,25.0167,107.0500,China,6300.0,Hydro
+Nuozhadu,22.6333,100.4167,China,5850.0,Hydro
+Jinping-I,28.3167,101.6500,China,3600.0,Hydro
+Xiaowan,24.7167,100.0833,China,4200.0,Hydro
+Laxiwa,36.0833,102.4833,China,4200.0,Hydro
+Huaneng Yuhuan,28.1167,121.4167,China,4000.0,Coal
+Waigaoqiao,31.3500,121.9000,China,5000.0,Coal
+Guodian Beilun,29.9167,121.7667,China,5000.0,Coal
+Jiaxing,30.7500,120.7500,China,4800.0,Coal
+Zouxian,35.3667,116.9667,China,4400.0,Coal
+Datang Tuoketuo,40.2000,111.3667,China,6600.0,Coal
+Guohua Taishan,21.9167,113.0000,China,5000.0,Coal
+Dabancheng Wind Farm,43.3500,88.3167,China,500.0,Wind
+Gansu Wind Farm,39.7500,97.3333,China,8000.0,Wind
+Jiuquan Wind Farm,39.7333,98.5000,China,12000.0,Wind
+Longyuan Rudong,32.2667,121.3833,China,300.0,Wind
+Golmud Solar Park,36.4167,95.2667,China,200.0,Solar
+Tengger Desert Solar Park,37.8333,105.0000,China,1500.0,Solar
+Datong Solar Power Top Runner Base,40.0833,113.3000,China,1000.0,Solar
+Longyangxia Dam Solar Park,36.1333,100.9000,China,850.0,Solar
+Panda Green Energy Solar Farm,39.9500,116.3000,China,100.0,Solar
+Flamanville,49.5372,-1.8811,France,5200.0,Nuclear
+Gravelines,51.0167,2.1333,France,5706.0,Nuclear
+Paluel,49.8578,0.6350,France,5528.0,Nuclear
+Cattenom,49.4153,6.2181,France,5448.0,Nuclear
+Tricastin,44.3297,4.7322,France,3660.0,Nuclear
+Bugey,45.7997,5.2700,France,3580.0,Nuclear
+Dampierre,47.7344,2.5167,France,3560.0,Nuclear
+Cruas,44.6317,4.7572,France,3660.0,Nuclear
+Saint-Alban,45.4058,4.7553,France,2670.0,Nuclear
+Golfech,44.1064,0.8456,France,2620.0,Nuclear
+Penly,49.9775,1.2119,France,2660.0,Nuclear
+Chooz,50.0992,4.7897,France,3000.0,Nuclear
+Civaux,46.4569,0.6522,France,2990.0,Nuclear
+Belleville,47.5092,2.8719,France,2620.0,Nuclear
+Nogent,48.5153,3.5178,France,2620.0,Nuclear
+Chinon,47.2303,0.1681,France,3620.0,Nuclear
+Blayais,45.2556,-0.6953,France,3640.0,Nuclear
+La Rance Tidal Power Plant,48.6333,-2.0333,France,240.0,Wave and Tidal
+Grand'Maison,45.1167,6.1333,France,1800.0,Hydro
+Cordemais,47.2833,-1.8833,France,1200.0,Coal
+Bouchain,50.2833,3.3167,France,605.0,Gas
+Martigues,43.4000,5.0333,France,930.0,Gas
+Dunkirk,51.0333,2.3667,France,790.0,Gas
+Niederaussem,50.9975,6.6569,Germany,3864.0,Coal
+Neurath,51.0500,6.6000,Germany,4400.0,Coal
+Jänschwalde,51.8333,14.4500,Germany,3000.0,Coal
+Boxberg,51.4167,14.5667,Germany,2575.0,Coal
+Schwarze Pumpe,51.5333,14.3500,Germany,1600.0,Coal
+Lippendorf,51.1667,12.3667,Germany,1866.0,Coal
+Moorburg,53.5000,9.9500,Germany,1654.0,Coal
+Gundremmingen,48.5167,10.4000,Germany,2688.0,Nuclear
+Isar,48.6000,12.2833,Germany,1485.0,Nuclear
+Emsland,52.4667,7.3167,Germany,1406.0,Nuclear
+Grohnde,52.0333,9.4167,Germany,1360.0,Nuclear
+Philippsburg,49.2500,8.4333,Germany,1468.0,Nuclear
+Brokdorf,53.8500,9.3500,Germany,1410.0,Nuclear
+Neckarwestheim,49.0417,9.1750,Germany,1310.0,Nuclear
+Grafenrheinfeld,50.0167,10.2000,Germany,1275.0,Nuclear
+Biblis,49.7083,8.4167,Germany,2407.0,Nuclear
+Brunsbüttel,53.8917,9.2000,Germany,806.0,Nuclear
+Krümmel,53.4083,10.4083,Germany,1346.0,Nuclear
+Unterweser,53.4250,8.4750,Germany,1345.0,Nuclear
+Stade,53.6417,9.5250,Germany,672.0,Nuclear
+Mülheim-Kärlich,50.4000,7.5000,Germany,1219.0,Nuclear
+Würgassen,51.6333,9.4333,Germany,640.0,Nuclear
+Lingen,52.4667,7.3167,Germany,252.0,Nuclear
+Obrigheim,49.3667,9.0833,Germany,340.0,Nuclear
+Jochenstein,48.5167,13.7167,Germany,132.0,Hydro
+Waldeck,51.2167,9.0667,Germany,623.0,Hydro
+Goldisthal,50.5000,11.0167,Germany,1060.0,Hydro
+Markersbach,50.5167,12.9500,Germany,1046.0,Hydro
+Hohenwarte,50.6167,11.4833,Germany,320.0,Hydro
+Alpha Ventus,54.0000,6.6000,Germany,60.0,Wind
+BARD Offshore 1,54.3167,5.9833,Germany,400.0,Wind
+Butendiek,54.9833,7.8500,Germany,288.0,Wind
+DanTysk,55.1667,7.4500,Germany,288.0,Wind
+Global Tech I,54.5000,6.3500,Germany,400.0,Wind
+Nordsee One,53.9500,6.9667,Germany,332.0,Wind
+Veja Mate,54.3333,5.8667,Germany,402.0,Wind
+Gode Wind,54.0333,7.1333,Germany,582.0,Wind
+Arkona,54.7833,13.8333,Germany,385.0,Wind
+Senvion Thornton Bank,51.5500,2.9500,Belgium,325.0,Wind
+Northwind,51.6000,2.9333,Belgium,216.0,Wind
+Belwind,51.6667,2.8000,Belgium,165.0,Wind
+Doel,51.3167,4.2500,Belgium,2911.0,Nuclear
+Tihange,50.5167,5.2833,Belgium,3016.0,Nuclear
+Ruien,50.7833,3.4833,Belgium,920.0,Coal
+Langerlo,50.9500,5.4000,Belgium,602.0,Coal
+Rodenhuize,51.1667,3.8000,Belgium,526.0,Coal
+Genk,50.9167,5.5000,Belgium,506.0,Coal
+Amercoeur,50.4167,4.4500,Belgium,420.0,Gas
+Drogenbos,50.8000,4.3000,Belgium,460.0,Gas
+Herdersbrug,51.2333,3.2167,Belgium,460.0,Gas
+Ringvaart,51.0500,3.7333,Belgium,357.0,Gas
+Vilvoorde,50.9167,4.4333,Belgium,385.0,Gas
+Zandvliet,51.3500,4.2833,Belgium,384.0,Gas
+Seraing,50.6000,5.5000,Belgium,470.0,Gas
+Coo-Trois-Ponts,50.4000,5.8833,Belgium,1164.0,Hydro
+Plate Taille,50.1667,4.3667,Belgium,144.0,Hydro
+Itaipu,25.4083,-54.5889,Brazil,14000.0,Hydro
+Tucuruí,3.8333,-49.6500,Brazil,8370.0,Hydro
+Ilha Solteira,-20.3833,-51.3667,Brazil,3444.0,Hydro
+Xingó,-9.6167,-37.7833,Brazil,3162.0,Hydro
+Paulo Afonso,-9.3833,-38.2167,Brazil,4280.0,Hydro
+Foz do Areia,-26.0167,-51.6667,Brazil,1676.0,Hydro
+Salto Santiago,-25.6167,-52.6167,Brazil,1420.0,Hydro
+Salto Osório,-25.5333,-53.0167,Brazil,1078.0,Hydro
+Segredo,-25.7833,-52.1167,Brazil,1260.0,Hydro
+Itumbiara,-18.4167,-49.1000,Brazil,2082.0,Hydro
+Marimbondo,-20.3000,-49.2000,Brazil,1440.0,Hydro
+Água Vermelha,-19.8500,-50.3500,Brazil,1396.0,Hydro
+Porto Primavera,-22.4833,-52.9500,Brazil,1540.0,Hydro
+Belo Monte,-3.1167,-51.7833,Brazil,11233.0,Hydro
+Jirau,-9.3333,-64.7333,Brazil,3750.0,Hydro
+Santo Antônio,-8.8000,-63.9500,Brazil,3568.0,Hydro
+Teles Pires,-9.3333,-56.7833,Brazil,1820.0,Hydro
+Angra,-23.0083,-44.4583,Brazil,1990.0,Nuclear
+Jorge Lacerda,-28.4500,-49.0167,Brazil,857.0,Coal
+Candiota,-31.5500,-53.6833,Brazil,446.0,Coal
+Pecém,-3.5333,-38.8000,Brazil,720.0,Coal
+Termopernambuco,-8.4000,-34.9667,Brazil,533.0,Gas
+Termorio,-22.7333,-43.6500,Brazil,1058.0,Gas
+Termobahia,-12.8167,-38.5167,Brazil,186.0,Gas
+Euzébio Rocha,-23.9500,-46.4167,Brazil,216.0,Gas
+Termocabo,-8.2833,-35.0333,Brazil,50.0,Gas
+Ibiritermo,-20.0167,-44.0667,Brazil,226.0,Gas
+Termofortaleza,-3.8333,-38.5833,Brazil,327.0,Gas
+Termomacaé,-22.3833,-41.7833,Brazil,923.0,Gas
+Araucária,-25.5500,-49.4000,Brazil,484.0,Gas
+Uruguaiana,-29.7500,-57.0833,Brazil,639.0,Gas
+Linhares,-19.3833,-40.0667,Brazil,204.0,Gas
+Eólica de Osório,-29.8833,-50.2667,Brazil,150.0,Wind
+Eólica de Palmares,-30.2500,-50.5000,Brazil,180.0,Wind
+Eólica de Sangradouro,-30.1833,-50.4667,Brazil,258.0,Wind
+Eólica de Atlântica,-30.1167,-50.1000,Brazil,225.0,Wind
+Eólica de Cerro Chato,-31.5500,-54.1667,Brazil,90.0,Wind
+Eólica de Geribatu,-29.4500,-49.8167,Brazil,258.0,Wind
+Eólica de Hermenegildo,-33.6667,-53.2500,Brazil,181.0,Wind
+Eólica de Chuí,-33.7167,-53.4500,Brazil,144.0,Wind
+Eólica de Artilleros,-33.2500,-53.7833,Brazil,65.0,Wind
+Eólica de Cerro Grande,-31.5833,-54.1500,Brazil,151.0,Wind
+Eólica de Corredor do Senandes,-32.0333,-52.1000,Brazil,108.0,Wind
+Eólica de Minuano,-32.5500,-52.5500,Brazil,52.0,Wind
+Eólica de Coxilha Negra,-30.8333,-55.6000,Brazil,30.0,Wind
+Eólica de Verace,-32.1500,-52.1000,Brazil,34.0,Wind
+Eólica de Cidreira,-30.1667,-50.2333,Brazil,70.0,Wind
+Usina Solar de Nova Olinda,-7.0833,-40.4500,Brazil,292.0,Solar
+Usina Solar de Ituverava,-9.6333,-40.5833,Brazil,254.0,Solar
+Usina Solar de Lapa,-13.2500,-43.4167,Brazil,158.0,Solar
+Usina Solar de Bom Jesus da Lapa,-13.2500,-43.4167,Brazil,158.0,Solar
+Usina Solar de Horizonte,-9.4167,-40.5000,Brazil,103.0,Solar
+Usina Solar de Guaimbê,-21.9167,-49.8833,Brazil,150.0,Solar
+Usina Solar de Pirapora,-17.3500,-44.9333,Brazil,321.0,Solar
+Usina Solar de Sertão,-9.5833,-40.8000,Brazil,162.0,Solar
+Usina Solar de Juazeiro,-9.4167,-40.5000,Brazil,90.0,Solar
+Usina Solar de Sobral,-3.6833,-40.3500,Brazil,30.0,Solar
+Usina Solar de Tauá,-6.0000,-40.3000,Brazil,5.0,Solar
+Usina Solar de Assú,-5.5833,-36.9167,Brazil,30.0,Solar
+Usina Solar de Floresta,-8.6000,-38.5667,Brazil,90.0,Solar
+Usina Solar de Paracatu,-17.2333,-46.8667,Brazil,150.0,Solar
+Usina Solar de São Gonçalo,-9.0000,-42.7000,Brazil,475.0,Solar
+Usina Solar de Janaúba,-15.8000,-43.3167,Brazil,415.0,Solar
+Hornsea,53.8833,1.9167,United Kingdom,1218.0,Wind
+London Array,51.6167,1.5333,United Kingdom,630.0,Wind
+Walney,54.05,-3.6333,United Kingdom,659.0,Wind
+Gwynt y Môr,53.4833,-3.5833,United Kingdom,576.0,Wind
+Greater Gabbard,51.8833,1.9333,United Kingdom,504.0,Wind
+Beatrice,58.1,-3.0833,United Kingdom,588.0,Wind
+East Anglia ONE,52.2167,2.4833,United Kingdom,714.0,Wind
+Moray East,58.1667,-2.7167,United Kingdom,950.0,Wind
+Triton Knoll,53.4833,0.8,United Kingdom,857.0,Wind
+Dogger Bank,54.9833,2.25,United Kingdom,3600.0,Wind
+Drax,53.7375,-0.9981,United Kingdom,3906.0,Biomass
+Ratcliffe-on-Soar,52.8667,-1.25,United Kingdom,2000.0,Coal
+West Burton,53.3667,-0.8,United Kingdom,2000.0,Coal
+Cottam,53.3,-0.7833,United Kingdom,2000.0,Coal
+Pembroke,51.6833,-4.9833,United Kingdom,2180.0,Gas
+Saltend,53.7333,-0.2333,United Kingdom,1200.0,Gas
+Seabank,51.5333,-2.6833,United Kingdom,1140.0,Gas
+Sutton Bridge,52.6333,0.1833,United Kingdom,819.0,Gas
+Didcot,51.6333,-1.2667,United Kingdom,1940.0,Gas
+Sizewell,52.2133,1.6197,United Kingdom,1198.0,Nuclear
+Hinkley Point,51.2089,-3.1272,United Kingdom,1220.0,Nuclear
+Hartlepool,54.6347,-1.1811,United Kingdom,1190.0,Nuclear
+Heysham,54.0292,-2.9164,United Kingdom,2400.0,Nuclear
+Torness,55.9689,-2.4083,United Kingdom,1190.0,Nuclear
+Dungeness,50.9131,0.9639,United Kingdom,1090.0,Nuclear
+Hunterston,55.7217,-4.8906,United Kingdom,1190.0,Nuclear
+Wylfa,53.4142,-4.4806,United Kingdom,980.0,Nuclear
+Oldbury,51.6483,-2.5572,United Kingdom,434.0,Nuclear
+Dinorwig,53.1167,-4.1167,United Kingdom,1728.0,Hydro
+Cruachan,56.4167,-5.0167,United Kingdom,440.0,Hydro
+Ffestiniog,52.9667,-3.95,United Kingdom,360.0,Hydro
+Foyers,57.2667,-4.4833,United Kingdom,300.0,Hydro
+Sloy,56.25,-4.7167,United Kingdom,152.8,Hydro
+Glendoe,57.1,-4.55,United Kingdom,100.0,Hydro
+Coire Glas,57.0167,-4.85,United Kingdom,1500.0,Hydro

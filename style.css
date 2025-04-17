@@ -1,0 +1,547 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure html and body take full height */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Modern system font stack */
+    background-color: #f8f9fa; /* Light background */
+    display: flex;
+    flex-direction: column; /* Stack title and map vertically */
+}
+
+h1 {
+    text-align: center;
+    margin: 15px 0 10px 0; /* Adjust margins */
+    font-size: 1.5em; /* Slightly smaller title */
+    font-weight: 300; /* Lighter font weight */
+    color: #333;
+}
+
+#map {
+    flex-grow: 1; /* Allow map to fill remaining vertical space */
+    width: 100%;
+    border-top: 1px solid #dee2e6; /* Subtle top border */
+    border-bottom: 1px solid #dee2e6; /* Subtle bottom border */
+}
+
+/* Optional: Slightly style the layer control */
+.leaflet-control-layers {
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
+}
+
+.leaflet-control-layers-list label {
+    font-weight: normal; /* Use normal font weight */
+}
+
+/* Power Plant Popup Styling */
+.power-plant-popup-container {
+    padding: 0;
+}
+
+.power-plant-popup-container .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+    padding: 0;
+    overflow: hidden;
+}
+
+.power-plant-popup-container .leaflet-popup-content {
+    margin: 0;
+    width: 280px !important;
+}
+
+.power-plant-popup {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.popup-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.icon-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    color: white;
+}
+
+.title-container {
+    flex: 1;
+}
+
+.title-container h3 {
+    margin: 0 0 2px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.fuel-type {
+    font-size: 12px;
+    color: #666;
+    display: block;
+}
+
+.popup-body {
+    padding: 12px;
+}
+
+.info-row {
+    margin-bottom: 8px;
+    display: flex;
+    font-size: 13px;
+}
+
+.info-label {
+    font-weight: 500;
+    color: #555;
+    width: 80px;
+}
+
+.info-value {
+    flex: 1;
+    color: #333;
+}
+
+.capacity-indicator {
+    margin: 12px 0;
+    padding: 8px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.capacity-bars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 4px;
+}
+
+.capacity-bar {
+    height: 8px;
+    flex: 1;
+    background-color: #ddd;
+    border-radius: 2px;
+}
+
+.capacity-bar.active {
+    background-color: #4CAF50;
+}
+
+.capacity-label {
+    font-size: 11px;
+    color: #777;
+    text-align: center;
+}
+
+.fuel-info {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+}
+
+.fuel-description {
+    line-height: 1.4;
+}
+
+/* Hide any red circular elements */
+[style*="background-color: rgba(255,0,0"], 
+[style*="background-color: rgb(255,0,0"],
+.data-center-marker,
+.data-center-marker * {
+    display: none !important;
+}
+
+/* Dark Mode Styling */
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+/* Remove white stroke around power plant dots in dark mode */
+body.dark-theme .leaflet-interactive {
+    stroke: rgba(0, 0, 0, 0) !important;
+}
+
+/* Dark mode popup styling */
+body.dark-theme .leaflet-popup-content-wrapper {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .leaflet-popup-tip {
+    background-color: #2a2a2a;
+}
+
+body.dark-theme .power-plant-popup {
+    color: #f0f0f0;
+}
+
+body.dark-theme .title-container h3 {
+    color: #f0f0f0;
+}
+
+body.dark-theme .fuel-type {
+    color: #cccccc;
+}
+
+body.dark-theme .info-label {
+    color: #cccccc;
+}
+
+body.dark-theme .info-value {
+    color: #f0f0f0;
+}
+
+body.dark-theme .capacity-indicator {
+    background-color: #3a3a3a;
+}
+
+body.dark-theme .capacity-bar {
+    background-color: #555555;
+}
+
+body.dark-theme .capacity-label {
+    color: #cccccc;
+}
+
+body.dark-theme .fuel-info {
+    color: #cccccc;
+    border-top: 1px solid #444444;
+}
+
+/* Dark mode controls */
+.leaflet-control-layers.dark-theme,
+.leaflet-bar.dark-theme {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.leaflet-control-layers.dark-theme a,
+.leaflet-bar.dark-theme a {
+    color: #f0f0f0;
+}
+
+.leaflet-control-layers.dark-theme label {
+    color: #f0f0f0;
+}
+
+/* Dark theme for info box */
+.info-box.dark-theme {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444444;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 20px;
+    z-index: 1000;
+    position: relative;
+}
+
+.nav-links a {
+    padding: 8px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-links a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav-links a.active:hover {
+    background-color: #45a049;
+}
+
+body.dark-theme .nav-links a {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .nav-links a:hover {
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .nav-links a.active {
+    background-color: #388e3c;
+}
+
+body.dark-theme .nav-links a.active:hover {
+    background-color: #2e7d32;
+}
+
+/* Control Panel Styles */
+.control-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 320px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-height: calc(100vh - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+.control-panel.dark-theme {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444444;
+}
+
+.control-panel-header {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-panel.dark-theme .control-panel-header {
+    background-color: #333;
+    border-bottom: 1px solid #444;
+}
+
+.control-panel-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.control-panel-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    padding: 0;
+}
+
+.control-panel.dark-theme .control-panel-toggle {
+    color: #ccc;
+}
+
+.control-panel-content {
+    padding: 15px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.control-panel-section {
+    margin-bottom: 20px;
+}
+
+.control-panel-section-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.control-panel.dark-theme .control-panel-section-title {
+    border-bottom: 1px solid #444;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+.filter-checkbox input {
+    margin-right: 5px;
+}
+
+.filter-checkbox label {
+    font-size: 12px;
+}
+
+.range-filter {
+    margin-bottom: 15px;
+}
+
+.range-filter-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.range-slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.graph-container {
+    height: 200px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.control-panel.dark-theme .graph-container {
+    background-color: #333;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.stat-box {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.control-panel.dark-theme .stat-box {
+    background-color: #333;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+.control-panel.dark-theme .stat-label {
+    color: #ccc;
+}
+
+.control-panel-collapsed {
+    width: 50px !important;
+    min-width: 50px;
+    overflow: visible;
+}
+
+.control-panel-collapsed .control-panel-content {
+    display: none;
+}
+
+.control-panel-collapsed .control-panel-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.control-panel-collapsed .control-panel-header {
+    height: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-panel-collapsed .control-panel-title {
+    display: none;
+}
+
+.apply-filters-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.apply-filters-btn:hover {
+    background-color: #45a049;
+}
+
+.control-panel.dark-theme .apply-filters-btn {
+    background-color: #388e3c;
+}
+
+.control-panel.dark-theme .apply-filters-btn:hover {
+    background-color: #2e7d32;
+}
+
+/* Fuel type color indicators */
+.fuel-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .control-panel {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .control-panel {
+        width: calc(100% - 20px);
+        max-width: 320px;
+    }
+}
