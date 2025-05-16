@@ -1,9 +1,3 @@
-# Python dependencies for data processing (if needed)
-# pandas
-# geopandas
+# Python dependencies for Power Plant Visualization
 Flask
 Flask-Cors # Added for Cross-Origin Resource Sharing
-rasterio
-rio-tiler
-# xarray
-# Flask or FastAPI (for potential tile server)

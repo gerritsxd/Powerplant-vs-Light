@@ -1,34 +1,48 @@
-# Ignore large datasets
-night_light_data/
-*.tif
-*.tiff
-*.tif.gz
-
 # Python cache files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Environment files
-.env
-.venv
+*.so
+.Python
 env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
 venv/
 ENV/
 
-# System files
-.DS_Store
-Thumbs.db
-
-# Editor directories and files
+# IDE files
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# Logs
+# Logs and databases
 *.log
+*.sqlite
+session_logs/
 
-# Downloaded datasets that are too large for Git
-# The global power plant database is included in the repo
-# The light pollution dataset needs to be downloaded separately
+# Cleanup scripts
+force_cleanup.py
+cleanup.py
+remove_files.py
+
+# Backup directories
+backup_*/
+
+# VIIRS data files that aren't needed
+*.tif
+*.tif.gz
